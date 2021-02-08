@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
+import { v4 as uuid } from "uuid";
 
 const BoxList = () => {
   const initialBoxes = [
@@ -12,7 +13,7 @@ const BoxList = () => {
   const [boxes, setBoxes] = useState(initialBoxes);
 
   const addBox = (newBox) => {
-    setBoxes((boxes) => [...boxes, { ...newBox }]);
+    setBoxes((boxes) => [...boxes, { ...newBox, id: uuid() }]);
   };
 
   return (
