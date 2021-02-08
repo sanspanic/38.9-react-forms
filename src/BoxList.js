@@ -5,9 +5,9 @@ import { v4 as uuid } from "uuid";
 
 const BoxList = () => {
   const initialBoxes = [
-    { width: 30, height: 30, color: "red" },
-    { width: 40, height: 40, color: "blue" },
-    { width: 50, height: 50, color: "black" },
+    { width: 30, height: 30, color: "red", id: uuid() },
+    { width: 40, height: 40, color: "blue", id: uuid() },
+    { width: 50, height: 50, color: "black", id: uuid() },
   ];
 
   const [boxes, setBoxes] = useState(initialBoxes);
