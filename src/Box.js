@@ -1,14 +1,22 @@
 import React, { useState } from "react";
 
-const Box = ({ width, height, color }) => {
+const Box = ({ id, width, height, color, removeBox }) => {
+  const handleRemove = () => {
+    removeBox(id);
+  };
+
   return (
-    <div
-      style={{
-        backgroundColor: color,
-        height: `${height}px`,
-        width: `${width}px`,
-      }}
-    ></div>
+    <>
+      <div
+        id={id}
+        style={{
+          backgroundColor: color,
+          height: `${height}px`,
+          width: `${width}px`,
+        }}
+      ></div>
+      <button onClick={handleRemove}>X</button>
+    </>
   );
 };
 
