@@ -47,7 +47,7 @@ const NewBoxForm = ({ addBox }) => {
         name="height"
         placeholder="height"
       />
-      <button>Submit</button>
+      <button>Add new</button>
     </form>
   );
 };
